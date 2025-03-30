@@ -1,0 +1,296 @@
+body {
+    font-family: "Nunito", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #2E3A47;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+#toggle-btn {
+    background-color: #12577B;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 20px;
+}
+
+#toggle-btn:hover {
+    background-color: #A9CFE5;
+    color: #333333;
+}
+
+#toggle-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #0E4563;
+}
+
+.modo-claro {
+    background-color: #F9F9F9;
+    color: #333333;
+}
+
+.modo-claro a {
+    color: #007BFF;
+}
+
+.modo-claro a:hover {
+    color: #333333;
+}
+
+.modo-claro section {
+    background-color: transparent;
+}
+
+.modo-escuro {
+    background-color: #2E3A47;
+    color: #F7F7F7;
+}
+
+.modo-escuro a {
+    color: #A9CFE5;
+}
+
+.modo-escuro a:hover {
+    color: #F7F7F7;
+}
+
+.modo-escuro h1 {
+    color: #F7F7F7;
+}
+
+.modo-escuro h2 {
+    color: #A9CFE5;
+}
+
+.modo-escuro h3 {
+    color: #87B3D1;
+}
+
+.modo-escuro ul, 
+.modo-escuro li, 
+.modo-escuro p {
+    color: #F7F7F7;
+}
+
+.modo-escuro li a {
+    color: #A9CFE5;
+}
+
+.modo-escuro li a:hover {
+    color: #F7F7F7;
+}
+
+.modo-escuro #contato a {
+    color: #A9CFE5;
+    transition: color 0.3s ease-in-out;
+}
+
+.modo-escuro #contato a:hover {
+    color: #F7F7F7;
+}
+
+.modo-escuro #toggle-btn:hover {
+    background-color: #A9CFE5;
+    color: #333333;
+}
+
+.modo-escuro section {
+    background-color: transparent;
+}
+
+#container-principal {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.coluna-esquerda, .coluna-direita {
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.coluna-esquerda {
+    width: 30%;
+    min-width: 200px;
+}
+
+.coluna-direita {
+    width: 65%;
+    min-width: 300px;
+}
+
+#educacao br {
+    padding-top: 20px;
+}
+
+.titulo {
+    font-weight: bold;
+    display: inline;
+    color: #6C8A9E;
+}
+
+h1 {
+    font-weight: 700;
+    color: #333333;
+    font-size: 28px;
+}
+
+h2 {
+    font-weight: 700;
+    color: #4A6B8C;
+    font-size: 22px;
+}
+
+h3 {
+    font-weight: 700;
+    color: #6C8A9E;
+    font-size: 18px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 10px;
+    color: #333333;
+}
+
+li {
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+li a {
+    color: #A9CFE5;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+li a:hover {
+    color: #4A6B8C;
+    text-decoration: underline;
+}
+
+p {
+    font-weight: 400;
+    color: #333333;
+    line-height: 1.5;
+}
+
+a {
+    color: #A9CFE5;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #F7F7F7;
+    text-decoration: underline;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+#voltar-topo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #12577B;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#voltar-topo.visivel {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#voltar-topo:hover {
+    background-color: #A9CFE5;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+@media (max-width: 760px) {
+    #container-principal {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .coluna-esquerda, .coluna-direita {
+        width: 100%;
+        padding: 10px;
+        min-width: 0;
+    }
+
+    section {
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animado {
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
