@@ -1,0 +1,326 @@
+/* ==========================
+BASE
+========================== */
+
+body {
+    font-family: "Nunito", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    background-color: #2E3A47;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+/* ==========================
+TIPOGRAFIA
+========================== */
+
+h1 {
+    font-weight: 700;
+    color: #333333;
+    font-size: 28px;
+}
+
+h2 {
+    font-weight: 700;
+    color: #4A6B8C;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-weight: 700;
+    color: #6C8A9E;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-weight: 400;
+    color: #333333;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 10px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+li {
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.titulo {
+    font-weight: bold;
+    color: #6C8A9E;
+}
+
+a {
+    color: #A9CFE5;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #F7F7F7;
+    text-decoration: underline;
+}
+
+/* ==========================
+LAYOUT
+========================== */
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#container-principal {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.coluna-esquerda,
+.coluna-direita {
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.coluna-esquerda {
+    width: 30%;
+    min-width: 200px;
+}
+
+.coluna-direita {
+    width: 65%;
+    min-width: 300px;
+}
+
+section {
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+/* ==========================
+EXPERIÊNCIA
+========================== */
+
+.experiencia-item {
+    margin-top: 10px;
+}
+
+.experiencia-item ul {
+    margin-top: 12px;
+}
+
+.experiencia-item li {
+    margin-bottom: 8px;
+}
+
+#resumo-profissional p {
+    text-align: justify;
+}
+
+/* ==========================
+BOTÃO DE TEMA
+========================== */
+
+#toggle-btn {
+    background-color: #12577B;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 20px;
+}
+
+#toggle-btn:hover {
+    background-color: #A9CFE5;
+    color: #333333;
+}
+
+#toggle-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #0E4563;
+}
+
+/* ==========================
+BOTÃO VOLTAR AO TOPO
+========================== */
+
+#voltar-topo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #12577B;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#voltar-topo.visivel {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#voltar-topo:hover {
+    background-color: #A9CFE5;
+}
+
+/* ==========================
+MODO CLARO
+========================== */
+
+.modo-claro {
+    background-color: #F9F9F9;
+    color: #333333;
+}
+
+.modo-claro a {
+    color: #007BFF;
+}
+
+.modo-claro a:hover {
+    color: #333333;
+}
+
+/* ==========================
+MODO ESCURO
+========================== */
+
+.modo-escuro {
+    background-color: #2E3A47;
+    color: #F7F7F7;
+}
+
+.modo-escuro h1 {
+    color: #F7F7F7;
+}
+
+.modo-escuro h2 {
+    color: #A9CFE5;
+}
+
+.modo-escuro h3 {
+    color: #87B3D1;
+}
+
+.modo-escuro p,
+.modo-escuro ul,
+.modo-escuro li {
+    color: #F7F7F7;
+}
+
+.modo-escuro a {
+    color: #A9CFE5;
+}
+
+.modo-escuro a:hover {
+    color: #F7F7F7;
+}
+
+.modo-escuro #toggle-btn:hover {
+    background-color: #A9CFE5;
+    color: #333333;
+}
+
+/* ==========================
+RESPONSIVIDADE
+========================== */
+
+@media (max-width: 760px) {
+
+    #container-principal {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .coluna-esquerda,
+    .coluna-direita {
+        width: 100%;
+        min-width: 0;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+
+}
+
+/* ==========================
+ANIMAÇÕES
+========================== */
+
+@keyframes fadeInUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+.animado {
+    opacity: 0;
+    transition: opacity 0.5s ease,
+                transform 0.5s ease;
+}
+
+.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
